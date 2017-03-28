@@ -1,4 +1,4 @@
-Number Formatter
+weather-on
 =========
 
 A Node.js CLI weather app
