@@ -9,8 +9,8 @@
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "dev": "webpack --progress --colors --watch --env dev",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "test": "istanbul cover -x ./test/*.spec.js mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
-    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js",
+    "test": "istanbul cover -x ./test/*.spec.js -- _mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
+    "test:watch": "_mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "devDependencies": {
@@ -26,9 +26,10 @@
     "cz-conventional-changelog": "2.0.0",
     "eslint": "1.7.2",
     "eslint-loader": "1.6.1",
+    "estraverse": "4.2.0",
     "ghooks": "2.0.0",
     "istanbul": "0.4.5",
-    "mocha": "2.3.4",
+    "mocha": "3.2.0",
     "semantic-release": "^6.3.2",
     "webpack": "2.2.1",
     "yargs": "6.6.0"
