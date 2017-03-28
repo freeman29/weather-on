@@ -1,7 +1,7 @@
 /*global describe, it, before */
 
 import chai from 'chai';
-import Library from '../lib/library.js';
+import Library from '../lib/weather-on.js';
 
 chai.expect();
 
@@ -15,7 +15,7 @@ describe('Given an instance of my library',  () => {
   });
   describe('when I need the name', () => {
     it('should return the name', () => {
-      expect(lib.name).to.be.equal('Library');
+      expect(lib.name).to.be.equal('Weather On');
     });
   });
 });
